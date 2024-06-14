@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Transitions ---------------- */
+.hidden{
+    opacity: 0;
+    filter: blur(1px);
+    transition: all 1s;
+}
+
+.show{
+    filter: blur(0px);
+    opacity: 1;
+}
+
+/* END TRANSITIONS ----------- */
+
+img{
+    width: 100%;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #18181B;
+}
+
+nav{
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav-logo{
+    max-width: 200px;
+    cursor: pointer;
+}
+
+.nav-logo .imageOUT{
+    display: none;
+}
+
+.nav-logo:hover .imageOUT{
+    display: block;
+}
+
+.nav-logo:hover .imageIN{
+    display: none;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link a{
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #fff;
+}
+
+.link a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #530087;
+    transition: all 0.2s ease;
+}
+
+.link a:hover::after{
+    width: 80%;
+}
+
+.btn{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #530087;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    background-color: #8f05e6;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.blur{
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #530087;
+    z-index: -100;
+}
+
+
+header{
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+}
+
+header .content h4{
+    margin-bottom: 1rem;
+    color: #ccc;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+header .content h1{
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+header .content h2{
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 3rem;
+}
+
+header .content p{
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+header .headshot-1{
+    position: relative;
+}
+
+header .headshot-1 img{
+    max-width: 450px;
+    margin: auto;
+    border-radius: 100%;
+    box-shadow: 0 0 100px 25px #53008732;
+}
+
+.container{
+    align-items: center;
+}
+
+section .header{
+    margin-bottom: 1rem;
+    color: #fff;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.edu{
+    display: flex;
+    justify-content: flex-start;
+    margin: auto;
+    background-color: #231f20;
+    padding: 1rem;
+    align-items: center;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    gap: 2rem;
+    max-width: 1000px;
+}
+
+.degrees{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1rem;
+    flex: 1
+
+}
+i{
+    font-size: 7rem;
+    color: white;
+}
+.degree-card{
+    background-color: #2e292a;
+    border-radius: 25px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 2rem;
+    flex: 1;
+    transition: all 0.5s ease;
+}
+
+.degree-card:hover{
+    background-color: #350057;
+}
+
+.container h4{
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.container p{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 250;
+    color: white;
+}
+
+.header{
+    margin-bottom: 1rem;
+    color: #fff;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+/* Timeline CSS below */
+
+/*Setting up the fonts*/
+.timeline h3{
+    font-style: italic;
+    font-weight: 500;
+}
+
+.timeline{
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+.timeline-container{
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+}
+
+.text-box{
+    padding: 20px 30px;
+    background: #ccc;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.left-container{
+    left: 0;
+}
+
+.right-container{
+    left: 50%;
+}
+
+.timeline::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #ccc;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+}
+
+.text-box:hover{
+    border: 3px solid #530087;
+    border-style: outset;
+}
+
+.left-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #ccc;
+    right: -15px;
+}
+
+.right-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #ccc;
+    left: -15px;
+}
+
+.skills{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.skill-set{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 0.8rem;
+    list-style: none;
+}
+
+.skill{
+    font-size: 1.4rem;
+    color: #ccc;
+    background-color: rgb(31, 28, 28);
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.skill:hover{
+    border: 2px solid #530087;
+    border-style: outset;
+}
+
+.skill-set i{
+    font-size: 1.2rem;
+}
+
+footer{
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p{
+    color: #ccc;
+}
+
+footer i{
+    font-size: 6rem;
+}
+
+footer i:hover{
+    color:#370058;
+}
+
+
+
+
+
+/* PHONE DEVELOPMENT BELOW */
+
+@media screen and (max-width: 600px){
+    
+    nav{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding-bottom: 0rem;
+    }
+
+    .nav-links{
+        position: relative;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .imageIN{
+        position: relative;
+    }
+
+    .btn{
+        width: 0;
+        height: 0;
+        display: none;
+        padding: none;
+    }
+
+    header.container{
+        padding-top: 2rem;
+    }
+
+    header{
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .edu{
+        flex-direction: column;
+    }
+    .degree-card{
+        gap: 0.6rem;
+    }
+    .container i{
+        font-size: 4rem;
+    }
+    .container h4{
+        font-size: 0.8rem;
+    }
+    .container p{
+        text-decoration: none;
+        font-size: 0.7rem;
+        font-weight: 250;
+        color: white;
+    }
+
+    .timeline{
+        margin: 50px auto;
+    }
+
+    .timeline::after{
+        left: 31px;
+    }
+
+    .timeline-container{
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+
+    .text-box{
+        font-size: 13px;
+    }
+    .text-box small{
+        margin-bottom: 10px;
+    }
+
+    .right-container{
+        left: 0;
+    }
+
+    .left-container-arrow, .right-container-arrow{
+        border-right: 15px solid #ccc;
+        border-left: 0;
+        left: -15px;
+    }
+
+
+    .skill-set{
+        justify-content: center;
+    }
+}
